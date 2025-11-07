@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Pendências - Datamask</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="datamasklogo.png" alt="Logo da datamask" class="logo">
+        <h2>Datamask - Cadastro de Pendências</h2>
+
+        <form id="formPendencia">
+            <label>Nome do Cliente:</label>
+            <input type="text" id="cliente" required />
+
+            <label>Produto / Equipamento:</label>
+            <input type="text" id="produto" required />
+
+            <label>Status:</label>
+            <select id="status" required>
+                <option value="Pendente">Pendente</option>
+                <option value="Em andamento">Em andamento</option>
+                <option value="Concluído">Concluído</option>
+            </select>
+
+            <label>Data de Entrada:</label>
+            <input type="date" id="dataEntrada" required />
+
+            <label>Descrição do Produto:</label>
+            <textarea id="descricao" rows="3" required></textarea>
+
+            <button type="submit">Cadastrar Pendência</button>
+        </form>
+
+        <table id="tabelaPendencias">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Produto</th>
+                    <th>Status</th>
+                    <th>Data</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="datamask.js"></script>
+</body>
+</html>
